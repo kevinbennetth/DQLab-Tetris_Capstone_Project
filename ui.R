@@ -9,7 +9,7 @@ ui <- div(class="wrapper bg-gradient-secondary",
     @import url('https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css');
     
     label {
-      font-size: 16px;
+      font-size: 15px;
     }
     
     .navbar {
@@ -23,7 +23,7 @@ ui <- div(class="wrapper bg-gradient-secondary",
   ),
   div(class="navbar navbar-default bg-default justify-content-center",
       h1(class="title",
-         "Top 5 Indonesian E-Commerce Platform Performances Dashboard")   
+         "E-Commerce Platform Performances in Indonesia Dashboard")   
   ),
   div(class="container-lg justify-content-center h-100",
   ## TOP DASHBOARD
@@ -32,10 +32,18 @@ ui <- div(class="wrapper bg-gradient-secondary",
   ### Display cards containing each performances numbers during that year (including app ranking in stores)
       div(class="card justify-content-center mb-4",
           div(class="card-header pb-0",
-              htmlOutput("e_commerce",
-                         container=tags$h3) # Outputs E-commerce name + year
+              div(class="row",
+                  div(class="col-lg-4 col-md-6 d-flex align-items-center",
+                      htmlOutput("e_commerce",
+                                 container=tags$h3)
+                      ),
+                  div(class="col-lg-8 col-md-6 d-flex align-items-center",
+                      uiOutput("store_select_ui")
+                      )
+                  )
+               # Outputs E-commerce name + year
               ),
-          div(class="card-body",
+          div(class="card-body pt-0",
               div(class="row",
                   div(class="col-lg-8 col-md-6", # Performance container
                       div(class="row", # Web visits container
@@ -43,7 +51,9 @@ ui <- div(class="wrapper bg-gradient-secondary",
                              "Average Web Visits"),
                           htmlOutput("traffic_stat",
                                      container=tags$p,
-                                     class="fs-3 fw-lighter")
+                                     class="fs-3 fw-lighter mb-0"),
+                          p(class="fs-6 fw-lighter",
+                            "visits/month")
                           ),
                       div(class="row", # Social media container
                           div(class="col-4", # Twitter
@@ -75,7 +85,7 @@ ui <- div(class="wrapper bg-gradient-secondary",
                               )
                           )
                       ),
-                  div(class="col-lg-4 col-md-6 align-middle", # Rankings container
+                  div(class="col-lg-4 col-md-6", # Rankings container
                       div(class="row",
                           div(class="col-6",
                               h5(class="mb-0",
@@ -103,15 +113,15 @@ ui <- div(class="wrapper bg-gradient-secondary",
       div(class="card justify-content-center mb-4",
           div(class="card-header pb-0",
               div(class="row",
-                  div(class="col-lg-4 col-md-6", # Title container
-                      h4("E-commerce Platform Average Performance (2017-2021)")
+                  div(class="col-lg-4 col-md-6 d-flex align-items-center", # Title container
+                      h4("E-commerce Platform Performance (2017-2021)")
                   ),
-                  div(class="col-lg-8 col-md-6", # SelectInput container
+                  div(class="col-lg-8 col-md-6 d-flex align-items-center", # SelectInput container
                       uiOutput("platform_select_ui")
                   )
               )
           ),
-          div(class="card-body",
+          div(class="card-body pt-0",
               div(class="row", # Plot container
                   div(class="col-lg-6 col-md-12", # Traffic plot container
                       plotlyOutput("traffic_line", height="100%")
@@ -129,15 +139,15 @@ ui <- div(class="wrapper bg-gradient-secondary",
       div(class="card justify-content-center mb-4",
           div(class="card-header pb-0",
               div(class="row", # SliderInput container
-                  div(class="col-lg-4 col-md-6",
+                  div(class="col-lg-4 col-md-6 d-flex align-items-center",
                       h4("E-commerce Platform Average Performance Comparison by Year")
                   ),
-                  div(class="col-lg-8 col-md-6",
+                  div(class="col-lg-8 col-md-6 d-flex align-items-center",
                       uiOutput("year_slide_ui")
                   )
               )
           ),
-          div(class="card-body",
+          div(class="card-body pt-0",
               div(class="row", # Plot container
                   div(class="col-lg-6 col-md-12", # Traffic plot container
                       plotlyOutput("traffic_bar", height="100%")

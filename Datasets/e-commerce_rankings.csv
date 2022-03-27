@@ -4,23 +4,118 @@
 "3","Bukalapak","5","4",2017
 "4","Blibli","6","5",2017
 "5","Shopee","1","1",2017
-"6","Lazada","3","2",2018
-"7","Tokopedia","2","3",2018
-"8","Bukalapak","4","4",2018
-"9","Blibli","7","6",2018
-"10","Shopee","1","1",2018
-"11","Shopee","1","1",2019
-"12","Tokopedia","2","3",2019
-"13","Bukalapak","4","4",2019
-"14","Lazada","3","2",2019
-"15","Blibli","5","5",2019
-"16","Shopee","1","1",2020
-"17","Tokopedia","2","4",2020
-"18","Bukalapak","7","7",2020
-"19","Lazada","3","3",2020
-"20","Blibli","6","5",2020
-"21","Tokopedia","2","4",2021
-"22","Shopee","1","1",2021
-"23","Lazada","3","2",2021
-"24","Bukalapak","6","7",2021
-"25","Blibli","8","5",2021
+"6","JD ID","3","6",2017
+"7","Elevenia","13","12",2017
+"8","Zalora","7","7",2017
+"9","Bhinneka","19","15",2017
+"10","Qoo10","20","23",2017
+"11","Orami","18","18",2017
+"12","Jakmall","Not Ranked","Not Ranked",2017
+"13","Otten Coffee","23","21",2017
+"14","Alfacart","22","16",2017
+"15","Berrybenka","8","11",2017
+"16","Mapemall","21","19",2017
+"17","Hijup","14","17",2017
+"18","Dinomarket","17","20",2017
+"19","Bobobobo","Not Ranked","Not Ranked",2017
+"20","Hijabenka","12","13",2017
+"21","Orori","Not Ranked","25",2017
+"22","Mothercare","25","Not Ranked",2017
+"23","Tees","Not Ranked","Not Ranked",2017
+"24","Pemmz","Not Ranked","Not Ranked",2017
+"25","Lazada","3","2",2018
+"26","Tokopedia","2","3",2018
+"27","Elevenia","14","11",2018
+"28","Bukalapak","4","4",2018
+"29","Blibli","7","6",2018
+"30","Shopee","1","1",2018
+"31","JD ID","5","5",2018
+"32","Zalora","6","8",2018
+"33","Bhinneka","27","20",2018
+"34","Qoo10","21","17",2018
+"35","Orami","28","28",2018
+"36","Jakmall","33","19",2018
+"37","Otten Coffee","22","23",2018
+"38","Alfacart","23","12",2018
+"39","Berrybenka","12","15",2018
+"40","Mapemall","16","22",2018
+"41","Hijup","18","21",2018
+"42","Dinomarket","24","27",2018
+"43","Bobobobo","Not Ranked","Not Ranked",2018
+"44","Hijabenka","17","25",2018
+"45","Orori","32","30",2018
+"46","Mothercare","20","29",2018
+"47","Tees","Not Ranked","Not Ranked",2018
+"48","Pemmz","Not Ranked","Not Ranked",2018
+"49","Shopee","1","1",2019
+"50","Tokopedia","2","3",2019
+"51","Bukalapak","4","4",2019
+"52","Lazada","3","2",2019
+"53","Blibli","5","5",2019
+"54","JD ID","7","6",2019
+"55","Bhinneka","23","19",2019
+"56","Orami","25","20",2019
+"57","Zalora","6","8",2019
+"58","Elevenia","17","12",2019
+"59","Otten Coffee","21","22",2019
+"60","Mapemall","15","18",2019
+"61","Alfacart","18","11",2019
+"62","Jakmall","24","17",2019
+"63","Pemmz","Not Ranked","Not Ranked",2019
+"64","Qoo10","26","23",2019
+"65","Berrybenka","14","14",2019
+"66","Hijup","29","21",2019
+"67","Mothercare","Not Ranked","Not Ranked",2019
+"68","Bobobobo","Not Ranked","Not Ranked",2019
+"69","Dinomarket","28","25",2019
+"70","Hijabenka","20","24",2019
+"71","Tees","Not Ranked","Not Ranked",2019
+"72","Orori","Not Ranked","27",2019
+"73","Shopee","1","1",2020
+"74","Tokopedia","2","4",2020
+"75","Bukalapak","7","7",2020
+"76","Lazada","3","3",2020
+"77","Blibli","6","5",2020
+"78","Orami","27","22",2020
+"79","Bhinneka","20","20",2020
+"80","JD ID","8","6",2020
+"81","Zalora","4","8",2020
+"82","Alfacart","16","10",2020
+"83","Elevenia","23","14",2020
+"84","Jakmall","22","17",2020
+"85","Otten Coffee","24","24",2020
+"86","Mapemall","11","18",2020
+"87","Orori","Not Ranked","Not Ranked",2020
+"88","Mothercare","Not Ranked","Not Ranked",2020
+"89","Berrybenka","14","19",2020
+"90","Bobobobo","Not Ranked","Not Ranked",2020
+"91","Qoo10","30","23",2020
+"92","Hijup","31","21",2020
+"93","Pemmz","Not Ranked","Not Ranked",2020
+"94","Dinomarket","28","27",2020
+"95","Hijabenka","25","25",2020
+"96","Tees","Not Ranked","Not Ranked",2020
+"97","Tokopedia","2","4",2021
+"98","Shopee","1","1",2021
+"99","Lazada","3","2",2021
+"100","Bukalapak","6","7",2021
+"101","Orami","Not Ranked","Not Ranked",2021
+"102","Blibli","8","5",2021
+"103","Zalora","4","8",2021
+"104","JD ID","7","6",2021
+"105","Bhinneka","17","17",2021
+"106","Mapemall","Not Ranked","Not Ranked",2021
+"107","Jakmall","16","13",2021
+"108","Elevenia","20","15",2021
+"109","Otten Coffee","18","19",2021
+"110","Hijup","25","18",2021
+"111","Alfacart","Not Ranked","Not Ranked",2021
+"112","Mothercare","Not Ranked","Not Ranked",2021
+"113","Orori","Not Ranked","Not Ranked",2021
+"114","Pemmz","Not Ranked","Not Ranked",2021
+"115","Berrybenka","12","16",2021
+"116","Dinomarket","23","20",2021
+"117","Bobobobo","Not Ranked","Not Ranked",2021
+"118","Qoo10","21","12",2021
+"119","Hijabenka","24","22",2021
+"120","Tees","Not Ranked","Not Ranked",2021
