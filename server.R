@@ -109,30 +109,35 @@ server <- function(input, output, session) {
   })
   
   # Plotly Output - Generate Plotly lineplot for Traffic
-  ## Default: Display All
   
   observeEvent(input$platform_select, {
     platform <- input$platform_select
     data <- performance()
     
     output$traffic_line <- renderPlotly({
-      selected_data <- data %>%
-        filter(Name %in% platform)
-      
-      fig <- plot_ly(data=selected_data, x=~Year, y=~Traffic,split=~Name, color=~Name,
-                      type="scatter", mode="lines", height=500) %>%
-        layout(title=paste("Website Traffic of", platform),
-                xaxis=list(title="Year"),
-                yaxis=list(title="Average Web Visits"))
-      
-      if(length(platform)>1){
-        fig<- fig %>% layout(legend=list(x=1,y=0.5,
-                                   title=list(text="<b>Platform</b>"),
-                                   font=list(size=10))
-                            )
+      if(length(platform)>0){
+        selected_data <- data %>%
+          filter(Name %in% platform)
+        
+        fig <- plot_ly(data=selected_data, x=~Year, y=~Traffic,split=~Name, color=~Name,
+                       type="scatter", mode="lines", height=500) %>%
+          layout(title=paste("Website Traffic of", platform),
+                 xaxis=list(title="Year"),
+                 yaxis=list(title="Average Web Visits"))
+        
+        if(length(platform)>1){
+          fig<- fig %>% layout(title=paste("Website Traffic of", length(platform), "E-commerce platforms"),
+                               legend=list(x=1,y=0.5,
+                                           title=list(text="<b>Platform</b>"),
+                                           font=list(size=10))
+          )
+        }
+        
+        fig
       }
-      
-      fig
+      else{
+        NULL
+      }
     })
   })
   
@@ -165,7 +170,7 @@ server <- function(input, output, session) {
         fig <- subplot(fig1, fig2, fig3, nrows=3,
                        shareX=TRUE, titleX=TRUE, titleY=TRUE) %>%
           layout(height=500,
-                 title="Social Media Followers of All E-commerce Platforms",
+                 title=paste("Social Media Followers of", length(platform), "E-commerce Platforms"),
                  xaxis=list(title="Year"),
                  legend=list(x=1,y=0.5,
                              title=list(text="<b>Platform</b>"),
@@ -177,35 +182,39 @@ server <- function(input, output, session) {
     }
     else{
       output$socialMedia_line <- renderPlotly({
-        platform <- input$platform_select
-        selected_data <- data %>%
-          filter(Name==platform)
-        
-        ## Plotting twitter performance
-        fig1 <- plot_ly(selected_data, x=~Year, y=~Twitter, 
-                        type="scatter", mode="lines") %>%
-          layout(yaxis=list(title="Twitter"))
-        
-        ## Plotting instagram performance
-        fig2 <- plot_ly(selected_data, x=~Year, y=~Instagram, 
-                        type="scatter", mode="lines") %>%
-          layout(yaxis=list(title="Instagram"))
-        
-        ## Plotting facebook performance
-        fig3 <- plot_ly(selected_data, x=~Year, y=~Facebook, 
-                        type="scatter", mode="lines") %>%
-          layout(yaxis=list(title="Facebook"))
-        
-        ## Plotting all subplots into one plot
-        fig <- subplot(fig1, fig2, fig3, nrows=3,
-                       shareX=TRUE, titleX=TRUE, titleY=TRUE) %>%
-          layout(height=500,
-                 title=paste("Social Media Followers of", platform),
-                 xaxis=list(title="Year"),
-                 showlegend=FALSE
-          )
-        
-        fig 
+        if(length(platform)>0){
+          selected_data <- data %>%
+            filter(Name==platform)
+          
+          ## Plotting twitter performance
+          fig1 <- plot_ly(selected_data, x=~Year, y=~Twitter, 
+                          type="scatter", mode="lines") %>%
+            layout(yaxis=list(title="Twitter"))
+          
+          ## Plotting instagram performance
+          fig2 <- plot_ly(selected_data, x=~Year, y=~Instagram, 
+                          type="scatter", mode="lines") %>%
+            layout(yaxis=list(title="Instagram"))
+          
+          ## Plotting facebook performance
+          fig3 <- plot_ly(selected_data, x=~Year, y=~Facebook, 
+                          type="scatter", mode="lines") %>%
+            layout(yaxis=list(title="Facebook"))
+          
+          ## Plotting all subplots into one plot
+          fig <- subplot(fig1, fig2, fig3, nrows=3,
+                         shareX=TRUE, titleX=TRUE, titleY=TRUE) %>%
+            layout(height=500,
+                   title=paste("Social Media Followers of", platform),
+                   xaxis=list(title="Year"),
+                   showlegend=FALSE
+            )
+          
+          fig
+        }
+        else{
+          NULL
+        }
       })
     }
   })
